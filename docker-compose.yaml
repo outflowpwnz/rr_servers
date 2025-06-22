@@ -1,0 +1,7 @@
+services:
+  bot:
+    container_name: rr-servers
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
