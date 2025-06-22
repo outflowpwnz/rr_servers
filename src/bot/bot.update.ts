@@ -4,6 +4,7 @@ import { ACTIONS, COMMANDS, SCENES, TContext } from './bot.types';
 import { ResourceService } from 'src/resource/resource.service';
 import { BotHelpers } from './bot.helpers';
 import { Resource } from 'src/resource/resource.entity';
+import { formatDateTomsk } from 'src/helpers/toTomskDateFormatter';
 
 @Update()
 export class BotUpdate {
@@ -91,8 +92,7 @@ export class BotUpdate {
     }
 
     const resource = await this.resourceService.getResource(resourceId);
-    const TOMSK_UTC_OFFSET = 7
-    resource?.updatedAt.setHours(resource?.updatedAt.getHours() + TOMSK_UTC_OFFSET)
-    ctx.reply(`url: ${resource?.url}\nЗанят: @${resource?.tgUser?.name}\nДата: ${resource?.updatedAt}`)
+    const formattedDate = formatDateTomsk(resource?.updatedAt)
+    ctx.reply(`url: ${resource?.url}\nЗанят: @${resource?.tgUser?.name}\nДата: ${formattedDate}`)
   }
 }
