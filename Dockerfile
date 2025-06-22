@@ -2,6 +2,9 @@ FROM node:20.11.1
 
 WORKDIR /app
 
-COPY dist .
+COPY . .
+RUN npm install
+
+RUN npm run build
 
 CMD ["node", "dist/main.js"]
