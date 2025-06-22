@@ -1,1 +1,0 @@
-{"version":3,"file":"tg-user.providers.js","sourceRoot":"","sources":["../../src/tg-user/tg-user.providers.ts"],"names":[],"mappings":";;;AACA,qDAA0C;AAE7B,QAAA,kBAAkB,GAAG,oBAAoB,CAAA;AAEzC,QAAA,eAAe,GAAG;IAC7B;QACE,OAAO,EAAE,0BAAkB;QAC3B,UAAU,EAAE,CAAC,UAAsB,EAAE,EAAE,CAAC,UAAU,CAAC,aAAa,CAAC,uBAAM,CAAC;QACxE,MAAM,EAAE,CAAC,aAAa,CAAC;KACxB;CACF,CAAC"}
